@@ -28,6 +28,10 @@ This template includes a global search that's powered by the [FlexSearch](https:
 
 This feature requires no configuration, and works out of the box by automatically scanning your documentation pages to build its index. You can adjust the search parameters by editing the `/src/mdx/search.mjs` file.
 
+## Deploy
+
+`fly deploy`
+
 ## License
 
 This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
