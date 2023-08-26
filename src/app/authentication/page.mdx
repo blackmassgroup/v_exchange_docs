@@ -1,0 +1,31 @@
+export const metadata = {
+  title: 'Authentication',
+  description:
+    'In this guide, we’ll look at how authentication works. Virus.exchange offers two ways to authenticate your API requests: Basic authentication and OAuth2 with a token.',
+}
+
+# Authentication
+
+You'll need to authenticate your requests to access any of the endpoints in the Virus.exchange API. In this guide, we'll look at how authentication works. {{ className: 'lead' }}
+
+## Basic authentication
+
+With basic authentication, you use your username and password to authenticate your HTTP requests. Here's how to authenticate using cURL:
+
+```bash {{ title: 'Example request with basic auth' }}
+curl https://virus.exchange/api/login \
+  -u username:password
+```
+
+This returns an API token that should be used in all following requests
+
+## Bearer token header
+
+When establishing a connection, you will need your access token — you will find it in the [Virus.exchange dashboard](https://virus.exchange/login) under API settings. Here's how to add the token to the request header using cURL:
+
+```bash {{ title: 'Example request with bearer token' }}
+curl https://virus.exchange/api/upload \
+  -H "Authorization: Bearer {token}"
+```
+
+Always keep your token safe and reset it if you suspect it has been compromised.

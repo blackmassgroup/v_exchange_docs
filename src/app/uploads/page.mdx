@@ -1,0 +1,50 @@
+export const metadata = {
+  title: 'File Uploads',
+  description:
+    'On this page, we’ll dive into the different endpoints you can use to upload files programmatically.',
+}
+
+# File
+
+Files are what make Virus.exchange — they are the basic building blocks of your every interaction with Virus.exchange. On this page, we’ll dive into the different endpoints you can use to upload files programmatically. {{ className: 'lead' }}
+
+---
+
+## Upload a file {{ tag: 'POST', label: '/api/uploads' }}
+
+<Row>
+  <Col>
+
+    This endpoint allows you to upload a file
+
+    ### Optional attributes
+
+    <Properties>
+      <Property name="file" type="binary">
+        Binary representation of the file
+      </Property>
+    </Properties>
+
+  </Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="POST" label="/api/upload">
+
+    ```bash {{ title: 'cURL' }}
+    curl -G https://virus.exchange/api/upload \
+      -H "Authorization: Bearer {token}" \
+      -d file=xgQQXg3hrtjh7AvZ \
+    ```
+
+    
+
+    </CodeGroup>
+
+    ```json {{ title: 'Response' }}
+    {
+      "id": 123
+    }
+    ```
+
+  </Col>
+</Row>
