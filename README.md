@@ -1,6 +1,4 @@
-# Protocol
-
-Protocol is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+# Vx_underground API Documentation
 
 ## Getting started
 
@@ -32,10 +30,6 @@ This feature requires no configuration, and works out of the box by automaticall
 
 `fly deploy`
 
-## License
-
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
-
 ## Learn more
 
 To learn more about the technologies used in this site template, see the following resources:
@@ -43,8 +37,6 @@ To learn more about the technologies used in this site template, see the followi
 - [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
 - [Next.js](https://nextjs.org/docs) - the official Next.js documentation
 - [Headless UI](https://headlessui.dev) - the official Headless UI documentation
-- [Framer Motion](https://www.framer.com/docs/) - the official Framer Motion documentation
 - [MDX](https://mdxjs.com/) - the official MDX documentation
 - [Algolia Autocomplete](https://www.algolia.com/doc/ui-libraries/autocomplete/introduction/what-is-autocomplete/) - the official Algolia Autocomplete documentation
 - [FlexSearch](https://github.com/nextapps-de/flexsearch) - the official FlexSearch documentation
-- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction) - the official Zustand documentation
