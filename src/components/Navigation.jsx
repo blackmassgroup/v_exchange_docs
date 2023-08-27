@@ -196,7 +196,6 @@ export const navigation = [
     title: 'Documentation',
     links: [
       { title: 'Introduction', href: '/' },
-      { title: 'Quickstart', href: '/quickstart' },
       { title: 'Authentication', href: '/authentication' },
       { title: 'Uploads', href: '/uploads' },
       { title: 'Errors', href: '/errors' },
