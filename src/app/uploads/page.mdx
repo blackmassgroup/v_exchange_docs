@@ -15,15 +15,7 @@ Files are what make Virus.exchange — they are the basic building blocks of you
 <Row>
   <Col>
 
-    This endpoint allows you to upload a file
-
-    ### Optional attributes
-
-    <Properties>
-      <Property name="file" type="binary">
-        Binary representation of the file
-      </Property>
-    </Properties>
+    This endpoint allows you to upload a file, the body of the request should the file binary.
 
   </Col>
   <Col sticky>
@@ -31,9 +23,9 @@ Files are what make Virus.exchange — they are the basic building blocks of you
     <CodeGroup title="Request" tag="POST" label="/api/upload">
 
     ```bash {{ title: 'cURL' }}
-    curl -G https://virus.exchange/api/upload \
-      -H "Authorization: Bearer {token}" \
-      -d file=xgQQXg3hrtjh7AvZ \
+    curl -X POST https://virus.exchange/api/upload -H "Authorization: Bearer $TOKEN"  /
+    --data-binary @/tmp/file
+
     ```
 
     
