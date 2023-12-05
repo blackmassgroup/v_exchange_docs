@@ -1,0 +1,92 @@
+export const metadata = {
+  title: 'Samples',
+  description:
+    'On this page, we’ll dive into the different endpoints you can use to upload files programmatically.',
+}
+
+# Sample
+
+Samples are what make Virus.exchange — they are the basic building blocks of your every interaction with Virus.exchange. On this page, we’ll dive into the different endpoints you can use to upload files programmatically. {{ className: 'lead' }}
+
+---
+
+## Create a Sample {{ tag: 'POST', label: '/api/samples/new' }}
+
+<Row>
+  <Col>
+
+    This endpoint allows you to upload a file, the body of the request should the file binary.
+
+  </Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="POST" label="/api/samples/new">
+
+
+    ```bash {{ title: 'cURL' }}
+    curl -X POST https://virus.exchange/api/samples/new /
+    -H "Authorization: Bearer $TOKEN" /
+    --data-binary @/tmp/file
+    ```
+
+    </CodeGroup>
+
+     <CodeGroup title="Request" tag="POST" label="/api/upload">
+
+
+    ```bash {{ title: 'cURL' }}
+    curl -X POST https://virus.exchange/api/upload /
+    -H "Authorization: Bearer $TOKEN" /
+    --data-binary @/tmp/file
+    ```
+
+    </CodeGroup>
+
+    ```json {{ title: 'Response' }}
+    {
+      "id": 123
+    }
+    ```
+
+  </Col>
+</Row>
+
+## Get a Sample {{ tag: 'GET', label: '/api/samples/:sha256' }}
+
+<Row>
+  <Col>
+
+    This endpoint allows you to retreieve a file from virus.exchange
+
+  </Col>
+  <Col sticky>
+
+    <CodeGroup title="Request" tag="GET" label="/api/samples/sha256">
+
+
+    ```bash {{ title: 'cURL' }}
+    curl -X GET https://virus.exchange/api/samples/sha256 /
+    -H "Authorization: Bearer $TOKEN"
+    ```
+
+    </CodeGroup>
+
+
+
+    ```json {{ title: 'Response' }}
+    {
+    	"md5": "",
+    	"size": 0,
+    	"type": "image/png",
+    	"names": ["test"],
+    	"sha512": "",
+    	"sha256": "sha256",
+    	"sha1": "",
+    	"tags": null,
+    	"first_seen": "2023-09-07T00:08:30Z",
+    	"download_link": ""
+    }
+    ```
+
+  </Col>
+</Row>

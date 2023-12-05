@@ -197,7 +197,7 @@ export const navigation = [
     links: [
       { title: 'Introduction', href: '/' },
       { title: 'Authentication', href: '/authentication' },
-      { title: 'Uploads', href: '/uploads' },
+      { title: 'Samples', href: '/samples' },
       { title: 'Errors', href: '/errors' },
     ],
   },
