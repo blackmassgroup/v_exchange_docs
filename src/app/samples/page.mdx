@@ -15,7 +15,7 @@ Samples are what make Virus.exchange — they are the basic building blocks of y
 <Row>
   <Col>
 
-    This endpoint allows you to upload a file, the body of the request should the file binary.
+    This endpoint allows you to upload a file to the exchange.
 
   </Col>
   <Col sticky>
@@ -24,9 +24,11 @@ Samples are what make Virus.exchange — they are the basic building blocks of y
 
 
     ```bash {{ title: 'cURL' }}
-    curl -X POST https://virus.exchange/api/samples/new /
-    -H "Authorization: Bearer $TOKEN" /
-    --data-binary @/tmp/file
+    curl --request POST \
+      --url https://virus.exchange/api/samples/new \
+      --header 'authorization: Bearer $API_KEY' \
+      --header 'content-type: multipart/form-data' \
+      --form 'file=@/tmp/file'
     ```
 
     </CodeGroup>
@@ -35,9 +37,11 @@ Samples are what make Virus.exchange — they are the basic building blocks of y
 
 
     ```bash {{ title: 'cURL' }}
-    curl -X POST https://virus.exchange/api/upload /
-    -H "Authorization: Bearer $TOKEN" /
-    --data-binary @/tmp/file
+    curl --request POST \
+      --url https://virus.exchange/api/upload \
+      --header 'authorization: Bearer $API_KEY' \
+      --header 'content-type: multipart/form-data' \
+      --form 'file=@/tmp/file'
     ```
 
     </CodeGroup>
